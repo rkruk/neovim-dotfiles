@@ -1,0 +1,205 @@
+# ---------------
+# Console Logging
+# ---------------
+
+snippet clg "Console log a variable" b
+console.log(\`$1\`, ${1:variable});
+endsnippet
+
+snippet clgs "Console log a string" b
+console.log('$0');
+endsnippet
+
+snippet clga "Console log arguments" b
+console.log(arguments);
+endsnippet
+
+snippet cld "Console debug a variable" b
+console.debug(\`$1\`, ${1:variable});
+endsnippet
+
+snippet clds "Console debug a string" b
+console.debug('$0');
+endsnippet
+
+snippet clda "Console log arguments" b
+console.debug(arguments);
+endsnippet
+
+# ---------
+# Functions
+# ---------
+
+snippet fnn "Arrow Function" i
+() => {$0}
+endsnippet
+
+snippet fna "Arrow Function with Arguments" i
+($1) => {$2}$0
+endsnippet
+
+# -----------
+# ES6 Imports
+# -----------
+
+snippet ii "Import" w
+import $1 from '$0$1';
+endsnippet
+
+# -----
+# Ember
+# -----
+
+snippet p "Create a computed property"
+Ember.computed('${1:propertyName}', function() {
+  $0
+})
+endsnippet
+
+snippet gg "Getter" i
+get('${1:propertyName}')$0
+endsnippet
+
+snippet gt "This Getter" i
+this.get('${1:propertyName}')$0
+endsnippet
+
+# -----
+# Unity
+# -----
+
+snippet dls "Debug Log a String" b
+Debug.Log('$0');
+endsnippet
+
+snippet dl "Debug Log a Variable" b
+Debug.Log(String.Format("$0$1: {0}", ${1:variable}));
+endsnippet
+
+snippet sf "String format" w
+String.Format("$2$1: {0}$0", ${2:variable});
+endsnippet
+
+# -----
+# React
+# -----
+
+snippet props "get property" i
+this.props.${1}
+endsnippet
+
+snippet state "get state" i
+this.state.${1}
+endsnippet
+
+snippet sst "set state" b
+this.setState({
+  ${1}: ${2}
+});$0
+endsnippet
+
+snippet render
+render() {
+  return (
+    ${1:<div />}
+  );
+}$0
+endsnippet
+
+snippet componentWillUnmount
+componentWillUnmount() {
+  $0
+}
+endsnippet
+
+snippet constructor
+constructor(props) {
+  super(props);
+  this.state = {
+    ${1}: ${2}
+  };
+}$0
+endsnippet
+
+snippet ptt "propTypes" b
+static propTypes = {
+  ${1}: PropTypes.${2:string}
+}
+endsnippet
+
+snippet pts "propTypes" b
+${1}: PropTypes.string$0
+endsnippet
+
+snippet pto "propTypes" b
+${1}: PropTypes.shape({
+  ${2}: PropTypes.${3:string},$0
+})
+endsnippet
+
+snippet rj "return JSX" b
+return (
+  <${1:div}>
+    $0
+  </$1>
+);
+endsnippet
+
+snippet r "return JSX" b
+return (
+  $0
+);
+endsnippet
+
+snippet component "new component" b
+import React, { Component, PropTypes } from 'react';
+
+export default class ${1:Name} extends Component {
+  static propTypes = {
+    ${2:prop}: ${3:PropTypes.string},
+  }
+
+  ${4:static defaultProps = {
+    ${5:onThing}: ${6:function() {}},
+  }}
+
+  ${7:state = {
+    ${8:prop}: ${9:true},
+  }}
+
+  render() {
+    return (
+      <div>
+        $0
+      </div>
+    );
+  }
+}
+endsnippet
+
+snippet functional "new functional component" b
+import React, { PropTypes } from 'react';
+
+const ${1:Name} = ({ ${2:props} }) => {
+  return (
+    <div>
+      $0
+    </div>
+  );
+};
+
+$1.propTypes = {
+  prop: PropTypes.string,
+};
+
+export default $1;
+endsnippet
+
+snippet switch "switch statement" b
+switch (${1:variable}) {
+  case ${2:case1}:
+    $0
+    break;
+  default:
+}
+endsnippet
