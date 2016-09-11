@@ -64,7 +64,7 @@ Or you can use [Solarized Theme](http://ethanschoonover.com/solarized/vim-colors
   More [here](https://wiki.gentoo.org/wiki/Git).
 
 
-* [syntastic](https://github.com/scrooloose/syntastic) Requires many different
+* [syntastic](https://github.com/scrooloose/syntastic) requires many different
   binaries installed depending on what filetypes you want it to check. Syntastic 
   itself has rather relaxed requirements: it doesn't have any external dependencies, 
   and it needs a version of Vim compiled with a few common features: 
