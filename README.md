@@ -1,20 +1,24 @@
-# My Personal Neovim Dotfiles Configuration
 
+<h1 align="center"> My Personal Neovim Dotfiles Configuration</h1>
+<br>
+<br>
 This Vim Dotfile configuration is just a bit simplified and customised to my personal needs copy of amazing [Jeremy Mack](https://github.com/mutewinter) [dot_vim](https://github.com/mutewinter/dot_vim) repo. The only small differences here are:
 - Rewritten small part of configuration for Linux use only (Gentoo/Funtoo). Thus all files, plugins, configs for Mac Os X platform have been removed.
 - Configuration is stripped from all unnecessary things (I'm not so much into Ruby programming environment - so here I'm trying to keep it really minimal and just to run some basics).
 
+<br>
 
 ## Installation
 
-1. `git clone http://github.com/rkruk/neovim-dotfiles.git ~/.vim`.
-1. `cd ~/.vim`.
+Clone this repository:
+
+ ```git clone http://github.com/rkruk/neovim-dotfiles.git ~/.vim```.
+ ```cd ~/.vim```.
 
 Install it: 
 
-1. Run: `scripts/setup`.
+ Run: `scripts/setup`.
 
-**or**
 
 And enjoy it! :)
 
@@ -24,7 +28,7 @@ And enjoy it! :)
 
 Prior to install you must run a few things. Make sure you have Neovim installed:
 
-`emerge -av app-editors/neovim`
+```emerge -av app-editors/neovim```
 
 A "live" ebuild can be found in [yngwin's](http://cgit.gentooexperimental.org/dev/yngwin.git/tree/app-editors/neovim) developer overlay.
 For instructions on how to install the Python modules, see [:help provider-python](https://neovim.io/doc/user/provider.html#provider-python).
@@ -36,7 +40,7 @@ dependencies.
 
 * [Jellybeans](http://www.vim.org/scripts/script.php?script_id=2555) A colorful, dark color scheme for Vim.
 
-`cd .vim && mkdir colors && cd colors && wget http://www.vim.org/scripts/download_script.php?src_id=17225`
+```cd .vim && mkdir colors && cd colors && wget http://www.vim.org/scripts/download_script.php?src_id=17225```
 
 Or you can use [Solarized Theme](http://ethanschoonover.com/solarized/vim-colors-solarized) like I do for everything.
 
@@ -44,14 +48,21 @@ Or you can use [Solarized Theme](http://ethanschoonover.com/solarized/vim-colors
   installed.
 
   On Funtoo you have git already installed at this point.. On Gentoo just do:
-  `emerge --ask dev-vcs/git`
+  
+  
+  ```emerge --ask dev-vcs/git```
+
 
   and fill your git basic details:
 
-  `git config --global user.email "<larry@gentoo.org>"`
-  `git config --global user.name "<larry_the_cow>"`
+
+  ```git config --global user.email "<larry@gentoo.org>"```
+  
+  ```git config --global user.name "<larry_the_cow>"```
+  
   
   More [here](https://wiki.gentoo.org/wiki/Git).
+
 
 * [syntastic](https://github.com/scrooloose/syntastic) Requires many different
   binaries installed depending on what filetypes you want it to check. Syntastic 
@@ -61,17 +72,17 @@ Or you can use [Solarized Theme](http://ethanschoonover.com/solarized/vim-colors
 
   See the
   [FAQ](https://github.com/scrooloose/syntastic#faq) for more information.
-* [Ag.vim](https://github.com/rking/ag.vim) Requires
+* [Ag.vim](https://github.com/rking/ag.vim) requires
   [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) to be
   installed.
   For Funtoo and Gentoo Linux systems - it is already in the repository:
 
-`emerge -av the_silver_searcher`
+  ```emerge -av the_silver_searcher```
 
-* [Source Code for Powerline](http://git.io/H3fYBg) The custom font I'm using
+* [Source Code for Powerline](http://git.io/H3fYBg) the custom font I'm using
   for vim-airline.
 
-  Download Source Code from [SourceCodePro Repo](https://git.io/vi0ZE) and copy 
+  Download Source Code files from [SourceCodePro Repo](https://git.io/vi0ZE) and copy 
   them to `.fonts` directory in your `/home` directory.
 
 * [CtrlP C Matching Extension](https://github.com/JazzCore/ctrlp-cmatcher)
@@ -83,32 +94,33 @@ Or you can use [Solarized Theme](http://ethanschoonover.com/solarized/vim-colors
   Copy it to the: `~/.vim/bundle/` directory.
 
   Then run the installation script:
+  
+  `cd ~/.vim/bundle/ctrlp-cmatcher`
 
-`cd ~/.vim/bundle/ctrlp-cmatcher`
-
-`./install.sh`
+  `./install.sh`
 
 * [underscore-cli](https://github.com/ddopson/underscore-cli) for JSON
   formatting. To have it you must have nodejs and NPM installed.
 
 Gentoo:
-`cat /etc/portage/package.keywords
 
-=net-libs/nodejs-0.10.10 ~amd64`
+```cat /etc/portage/package.keywords```
+
+```=net-libs/nodejs-0.10.10 ~amd64```
 
 Funtoo somehow doesn't need that argument to have it working.
 
 Install nodejs:
 
-`emerge -av nodejs`
+```emerge -av nodejs```
 
 then do:
 
-`curl https://npmjs.org/install.sh | sh`
+```curl https://npmjs.org/install.sh | sh```
 
 Finally install `underscore-cli` with the little help of npm:
 
-`npm install -g underscore-cli`
+```npm install -g underscore-cli```
 
 
 ## Mappings
