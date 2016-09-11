@@ -93,7 +93,7 @@ Or you can use [Solarized Theme](http://ethanschoonover.com/solarized/vim-colors
 
 Gentoo:
 `cat /etc/portage/package.keywords
-# required by nodejs (argument)
+
 =net-libs/nodejs-0.10.10 ~amd64`
 
 Funtoo somehow doesn't need that argument to have it working.
